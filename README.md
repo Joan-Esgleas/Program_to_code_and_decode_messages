@@ -1,2 +1,2 @@
-# Programa_de_codificar_y_descodificar
+# Program to code and decode message
  
