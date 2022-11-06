@@ -1,0 +1,153 @@
+\hypertarget{main_8cc}{}\doxysection{Referencia del Archivo main.\+cc}
+\label{main_8cc}\index{main.cc@{main.cc}}
+
+
+Programa principal.  
+
+
+Dependencia gráfica adjunta para main.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa principal. 
+
+Estamos suponiendo que los datos leídos siempre son correctos, ya que no incluímos comprobaciones al respecto. 
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cc@{main.cc}!main@{main}}
+\index{main@{main}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 14 del archivo main.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14             \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \mbox{\hyperlink{class_conjunto___alfabetos}{Conjunto\_Alfabetos}} conj\_Alfabetos;}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_conjunto___mensajes}{Conjunto\_Mensajes}} conj\_Mensajes;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_ad6216ad1b5b0f36cb523f1b6893f1480}{Leer\_conjunto\_de\_alfabetos}}();}
+\DoxyCodeLine{20     conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_ada8f5a5b67a16ce5ea7bd87225af43c9}{Leer\_conjunto\_de\_mensajes}}(conj\_Alfabetos);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{string} comando;}
+\DoxyCodeLine{23     cin >> comando;}
+\DoxyCodeLine{24     \textcolor{keywordflow}{while} (comando != \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}nuevo\_mensaje"{}} or comando == \textcolor{stringliteral}{"{}nm"{}}) \{}
+\DoxyCodeLine{26             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{27             \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{28             \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{29             cin >> idm >> ida;}
+\DoxyCodeLine{30             \textcolor{keywordflow}{if} (not conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}{Existe\_alfabeto}}(ida)) cout << \textcolor{stringliteral}{"{}ERROR: No existe alfabeto"{}} << endl;}
+\DoxyCodeLine{31             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_ac12093a5d7973a55293902c6d4b6ec87}{Existe\_mensajes}}(idm)) cout << \textcolor{stringliteral}{"{}ERROR: Ya existe un mensaje con se identificador"{}} <<endl;}
+\DoxyCodeLine{32             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{33                 conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_a0b32fafa93485a4a4aa20b9d3be0c5b0}{Anadir\_mensaje}}(idm, ida, conj\_Alfabetos);}
+\DoxyCodeLine{34             \}}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}nuevo\_alfabeto"{}} or comando == \textcolor{stringliteral}{"{}na"{}}) \{}
+\DoxyCodeLine{37             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{38             \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{39             cin >> ida;}
+\DoxyCodeLine{40             \textcolor{keywordflow}{if} (conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}{Existe\_alfabeto}}(ida)) cout << \textcolor{stringliteral}{"{}ERROR: Ya existe un alfabeto con se identificador"{}} <<endl;}
+\DoxyCodeLine{41             \textcolor{keywordflow}{else} conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_a0ee97874af4ca0d45770afd42ab29055}{Anadir\_alfabeto}}(ida);}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}borra\_mensaje"{}} or comando == \textcolor{stringliteral}{"{}bm"{}}) \{}
+\DoxyCodeLine{44             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{45             \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{46             cin >> idm;}
+\DoxyCodeLine{47             \textcolor{keywordflow}{if} (not conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_ac12093a5d7973a55293902c6d4b6ec87}{Existe\_mensajes}}(idm)) cout << \textcolor{stringliteral}{"{}ERROR: No existe  el mensaje"{}} << endl;}
+\DoxyCodeLine{48             conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_af0de8d69e70896e171f1fa1ec2f99ef8}{Borrar\_mensaje}}(idm, conj\_Alfabetos);}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}borra\_alfabeto"{}} or comando == \textcolor{stringliteral}{"{}ba"{}}) \{}
+\DoxyCodeLine{51             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{52             \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{53             cin >> ida;}
+\DoxyCodeLine{54             \textcolor{keywordflow}{if} (not conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}{Existe\_alfabeto}}(ida)) cout << \textcolor{stringliteral}{"{}ERROR: No existe el alfabeto"{}} << endl;}
+\DoxyCodeLine{55             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_a640a8fe0c0a3899c83423b2e1f41b971}{Existe\_mensajes\_con\_alfabeto}}(ida, conj\_Alfabetos)) cout << \textcolor{stringliteral}{"{}ERROR: Existe un mensaje con este alfabeto"{}} << endl;}
+\DoxyCodeLine{56             \textcolor{keywordflow}{else} conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_afa1811cc6691cb26d91d8b669d4574b9}{Borrar\_alfabeto}}(ida);}
+\DoxyCodeLine{57         \}}
+\DoxyCodeLine{58         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}listar\_mensajes"{}} or comando == \textcolor{stringliteral}{"{}lm"{}}) \{}
+\DoxyCodeLine{59             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{60             conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_a7e98ed6f7df506dfc1eaa2f482cf1cdf}{Listar\_mensajes}}();}
+\DoxyCodeLine{61         \}}
+\DoxyCodeLine{62         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}listar\_alfabetos"{}} or comando == \textcolor{stringliteral}{"{}la"{}}) \{}
+\DoxyCodeLine{63             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{64             conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_a6a0a3247359426a361adbca2eb2941bc}{Listar\_alfabetos}}();}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}codificar\_sustitucion\_guardado:"{}} or comando == \textcolor{stringliteral}{"{}csg"{}}) \{}
+\DoxyCodeLine{67             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{68             \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{69             cin >> idm;}
+\DoxyCodeLine{70             \textcolor{keywordflow}{if} (not conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_ac12093a5d7973a55293902c6d4b6ec87}{Existe\_mensajes}}(idm)) cout << \textcolor{stringliteral}{"{}ERROR: El mensaje no existe"{}} << endl;}
+\DoxyCodeLine{71             \textcolor{keywordflow}{else} conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_afa06c2010d0634feecf9d12313a838b9}{Codificar\_substitucion\_guardado}}(idm, conj\_Alfabetos);}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}codificar\_sustitucion:"{}} or comando == \textcolor{stringliteral}{"{}cs"{}}) \{}
+\DoxyCodeLine{74             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{75             \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{76             cin >> ida;}
+\DoxyCodeLine{77             cout << \textcolor{stringliteral}{"{}/////"{}} << endl;}
+\DoxyCodeLine{78             \mbox{\hyperlink{class_mensaje}{Mensaje}} m;}
+\DoxyCodeLine{79             m.\mbox{\hyperlink{class_mensaje_a75406ff0dc94439cdb57c92f79e29840}{Leer\_Clave}}();}
+\DoxyCodeLine{80             cout << \textcolor{stringliteral}{"{}/////"{}} << endl;}
+\DoxyCodeLine{81             m.\mbox{\hyperlink{class_mensaje_abeb7a708b2526a1f04b0619bbe995509}{Leer\_Mensaje}}(ida);}
+\DoxyCodeLine{82             cout << \textcolor{stringliteral}{"{}/////"{}} << endl;}
+\DoxyCodeLine{83             \textcolor{keywordflow}{if}(not conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}{Existe\_alfabeto}}(ida)) cout << \textcolor{stringliteral}{"{}ERROR: No existe el alfabeto"{}} << endl;}
+\DoxyCodeLine{84             \textcolor{keywordflow}{else} m.\mbox{\hyperlink{class_mensaje_ab819a01daef2489d9c51b1eea7a4a57e}{Codificar\_substitucion}}(conj\_Alfabetos);}
+\DoxyCodeLine{85         \}}
+\DoxyCodeLine{86         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}decodificar\_sustitución:"{}} or comando == \textcolor{stringliteral}{"{}ds"{}}) \{}
+\DoxyCodeLine{87             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{88             \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{89             cin >> ida;}
+\DoxyCodeLine{90             \mbox{\hyperlink{class_mensaje}{Mensaje}} m;}
+\DoxyCodeLine{91             m.\mbox{\hyperlink{class_mensaje_a75406ff0dc94439cdb57c92f79e29840}{Leer\_Clave}}();}
+\DoxyCodeLine{92             m.\mbox{\hyperlink{class_mensaje_abeb7a708b2526a1f04b0619bbe995509}{Leer\_Mensaje}}(ida);}
+\DoxyCodeLine{93             \textcolor{keywordflow}{if}(not conj\_Alfabetos.\mbox{\hyperlink{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}{Existe\_alfabeto}}(ida)) cout << \textcolor{stringliteral}{"{}ERROR: No existe el alfabeto"{}} << endl;}
+\DoxyCodeLine{94             \textcolor{keywordflow}{else} m.\mbox{\hyperlink{class_mensaje_a9df35e2e6d051b406c307e2e7eddfd91}{Descodificar\_substitucion}}(conj\_Alfabetos);}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}codificar\_permutacion\_guardado:"{}} or comando == \textcolor{stringliteral}{"{}cpg"{}}) \{}
+\DoxyCodeLine{97             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{98             \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{99             cin >> idm;}
+\DoxyCodeLine{100             \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{101             cin >> b;}
+\DoxyCodeLine{102             \textcolor{keywordflow}{if} (not conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_ac12093a5d7973a55293902c6d4b6ec87}{Existe\_mensajes}}(idm)) cout << \textcolor{stringliteral}{"{}ERROR: El mensaje no existe"{}} << endl;}
+\DoxyCodeLine{103             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{104                 conj\_Mensajes.\mbox{\hyperlink{class_conjunto___mensajes_afd659cf383d052fa7c31f542c0177d84}{Codificar\_permutacion\_guardado}}(b, idm);}
+\DoxyCodeLine{105             \}}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}codificar\_permutacion:"{}} or comando == \textcolor{stringliteral}{"{}cp"{}}) \{}
+\DoxyCodeLine{108             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{109             \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{110             cin >> b;}
+\DoxyCodeLine{111             \mbox{\hyperlink{class_mensaje}{Mensaje}} m;}
+\DoxyCodeLine{112             m.\mbox{\hyperlink{class_mensaje_abeb7a708b2526a1f04b0619bbe995509}{Leer\_Mensaje}}();}
+\DoxyCodeLine{113             m.\mbox{\hyperlink{class_mensaje_a96649764c356c10ec33161089da5e74d}{Codificar\_permutacion}}(b);}
+\DoxyCodeLine{114         \}}
+\DoxyCodeLine{115         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"{}decodificar\_permutacion:"{}} or comando == \textcolor{stringliteral}{"{}dp"{}}) \{}
+\DoxyCodeLine{116             cout << \textcolor{charliteral}{'\#'} << comando << endl;}
+\DoxyCodeLine{117             \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{118             cin >> b;}
+\DoxyCodeLine{119             \mbox{\hyperlink{class_mensaje}{Mensaje}} m;}
+\DoxyCodeLine{120             m.\mbox{\hyperlink{class_mensaje_abeb7a708b2526a1f04b0619bbe995509}{Leer\_Mensaje}}();}
+\DoxyCodeLine{121             m.\mbox{\hyperlink{class_mensaje_a088b542f5753d1a08e62b06082ae4f18}{Descodificar\_permutacion}}(b);}
+\DoxyCodeLine{122         \}}
+\DoxyCodeLine{123         cin >> comando;}
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125 \}}
+
+\end{DoxyCode}

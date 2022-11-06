@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pràctica Pro2: Fichero Fuente Conjunto_Alfabetos.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pràctica Pro2
+   &#160;<span id="projectnumber">Octubre 2022</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cdc6aaa126b433e03553128b59621360.html">Cabeceras</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Conjunto_Alfabetos.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_conjunto___alfabetos_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _CONJUNTO_ALFABETOS_HH_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _CONJUNTO_ALFABETOS_HH_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//####################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Includes en diagrama</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_alfabeto_8hh.html">Alfabeto.hh</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//####################################################</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Fuera de diagrama</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//####################################################</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_conjunto___alfabetos.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_conjunto___alfabetos.html">Conjunto_Alfabetos</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//Constructoras</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_conjunto___alfabetos.html#a2d2e07a24dbddee70e45920f176cd0e8">Conjunto_Alfabetos</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjunto___alfabetos.html#ad6216ad1b5b0f36cb523f1b6893f1480">Leer_conjunto_de_alfabetos</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjunto___alfabetos.html#a0ee97874af4ca0d45770afd42ab29055">Anadir_alfabeto</a>(<span class="keywordtype">string</span> identificador_del_alfabeto);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjunto___alfabetos.html#afa1811cc6691cb26d91d8b669d4574b9">Borrar_alfabeto</a> (<span class="keywordtype">string</span> identificador_del_alfabeto);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjunto___alfabetos.html#a6a0a3247359426a361adbca2eb2941bc">Listar_alfabetos</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_alfabeto.html">Alfabeto</a> <a class="code" href="class_conjunto___alfabetos.html#a7cf35f198456bc9ad82d00b0a8736b10">Consultar_alfabeto</a> (<span class="keywordtype">string</span> Identificador) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_conjunto___alfabetos.html#a560275a78c9abe405ca546a4eb0ba0cd">Existe_alfabeto</a>(<span class="keywordtype">string</span> identificador_de_alfabeto);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjunto___alfabetos.html#acbbc6f8c397016147e1792992e41219d">Anadir_mensaje_al_conjunto</a>(<span class="keywordtype">string</span> ida);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjunto___alfabetos.html#a5b5cc73cafc957f6e17ca70ef5307fb0">Borrar_mensaje_al_conjunto</a>(<span class="keywordtype">string</span> ida);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        map&lt;string,Alfabeto&gt; ConjuntoDeAlfabetos;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_alfabeto_8hh_html"><div class="ttname"><a href="_alfabeto_8hh.html">Alfabeto.hh</a></div><div class="ttdoc">Especificación de la clase Alfabeto.</div></div>
+<div class="ttc" id="aclass_alfabeto_html"><div class="ttname"><a href="class_alfabeto.html">Alfabeto</a></div><div class="ttdoc">Representa el conjunto de características y operaciones de un Alfabeto.</div><div class="ttdef"><b>Definition:</b> <a href="_alfabeto_8hh_source.html#l00033">Alfabeto.hh:33</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html"><div class="ttname"><a href="class_conjunto___alfabetos.html">Conjunto_Alfabetos</a></div><div class="ttdoc">Representa el conjunto de características y operaciones que se podrá realizar sobre un conjunto de Al...</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8hh_source.html#l00034">Conjunto_Alfabetos.hh:34</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_a0ee97874af4ca0d45770afd42ab29055"><div class="ttname"><a href="class_conjunto___alfabetos.html#a0ee97874af4ca0d45770afd42ab29055">Conjunto_Alfabetos::Anadir_alfabeto</a></div><div class="ttdeci">void Anadir_alfabeto(string identificador_del_alfabeto)</div><div class="ttdoc">Operacion que lee y añade un alfabeto al mapa de conjuntos de alfabetos Se lee y añade un nuevo alfab...</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00022">Conjunto_Alfabetos.cc:22</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_a2d2e07a24dbddee70e45920f176cd0e8"><div class="ttname"><a href="class_conjunto___alfabetos.html#a2d2e07a24dbddee70e45920f176cd0e8">Conjunto_Alfabetos::Conjunto_Alfabetos</a></div><div class="ttdeci">Conjunto_Alfabetos()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00007">Conjunto_Alfabetos.cc:7</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_a560275a78c9abe405ca546a4eb0ba0cd"><div class="ttname"><a href="class_conjunto___alfabetos.html#a560275a78c9abe405ca546a4eb0ba0cd">Conjunto_Alfabetos::Existe_alfabeto</a></div><div class="ttdeci">bool Existe_alfabeto(string identificador_de_alfabeto)</div><div class="ttdoc">Booleano que retorna true si existe al menos 1 alfabeto con este identificador y falso en cualqueir o...</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00057">Conjunto_Alfabetos.cc:57</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_a5b5cc73cafc957f6e17ca70ef5307fb0"><div class="ttname"><a href="class_conjunto___alfabetos.html#a5b5cc73cafc957f6e17ca70ef5307fb0">Conjunto_Alfabetos::Borrar_mensaje_al_conjunto</a></div><div class="ttdeci">void Borrar_mensaje_al_conjunto(string ida)</div><div class="ttdoc">Operacion que resta 1 a la cantidad de mensajes con ese alfabeto.</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00049">Conjunto_Alfabetos.cc:49</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_a6a0a3247359426a361adbca2eb2941bc"><div class="ttname"><a href="class_conjunto___alfabetos.html#a6a0a3247359426a361adbca2eb2941bc">Conjunto_Alfabetos::Listar_alfabetos</a></div><div class="ttdeci">void Listar_alfabetos() const</div><div class="ttdoc">Operacion que lista los alfabetos Se listan los alfabetos del sistema en orden creciente de identific...</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00034">Conjunto_Alfabetos.cc:34</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_a7cf35f198456bc9ad82d00b0a8736b10"><div class="ttname"><a href="class_conjunto___alfabetos.html#a7cf35f198456bc9ad82d00b0a8736b10">Conjunto_Alfabetos::Consultar_alfabeto</a></div><div class="ttdeci">Alfabeto Consultar_alfabeto(string Identificador) const</div><div class="ttdoc">Operacion que retorna un alfabeto identificado con un identificador.</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00053">Conjunto_Alfabetos.cc:53</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_acbbc6f8c397016147e1792992e41219d"><div class="ttname"><a href="class_conjunto___alfabetos.html#acbbc6f8c397016147e1792992e41219d">Conjunto_Alfabetos::Anadir_mensaje_al_conjunto</a></div><div class="ttdeci">void Anadir_mensaje_al_conjunto(string ida)</div><div class="ttdoc">Operacion que suma 1 a la cantidad de mensajes con ese alfabeto.</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00045">Conjunto_Alfabetos.cc:45</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_ad6216ad1b5b0f36cb523f1b6893f1480"><div class="ttname"><a href="class_conjunto___alfabetos.html#ad6216ad1b5b0f36cb523f1b6893f1480">Conjunto_Alfabetos::Leer_conjunto_de_alfabetos</a></div><div class="ttdeci">void Leer_conjunto_de_alfabetos()</div><div class="ttdoc">Operacion de lectura de un conjunto de alfabetos.</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00010">Conjunto_Alfabetos.cc:10</a></div></div>
+<div class="ttc" id="aclass_conjunto___alfabetos_html_afa1811cc6691cb26d91d8b669d4574b9"><div class="ttname"><a href="class_conjunto___alfabetos.html#afa1811cc6691cb26d91d8b669d4574b9">Conjunto_Alfabetos::Borrar_alfabeto</a></div><div class="ttdeci">void Borrar_alfabeto(string identificador_del_alfabeto)</div><div class="ttdoc">Operacion que borra un alfabeto del conjunto. Se lee y elimina del sistema un alfabeto con un identif...</div><div class="ttdef"><b>Definition:</b> <a href="_conjunto___alfabetos_8cc_source.html#l00029">Conjunto_Alfabetos.cc:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

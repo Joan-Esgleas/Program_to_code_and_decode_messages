@@ -1,0 +1,325 @@
+\hypertarget{class_alfabeto}{}\doxysection{Referencia de la Clase Alfabeto}
+\label{class_alfabeto}\index{Alfabeto@{Alfabeto}}
+
+
+Representa el conjunto de características y operaciones de un \mbox{\hyperlink{class_alfabeto}{Alfabeto}}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_alfabeto_a218c7371b04d202f3c7bfbc2640f091a}{Alfabeto}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_alfabeto_ad59f5232dbf908a6a2c61ff90b02502b}{Leer\+\_\+\+Alfabeto}} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_alfabeto_ab781a0a5baa722711fbb880b280899da}{Imprimir\+\_\+\+Alfabeto}} () const
+\begin{DoxyCompactList}\small\item\em Operación que imprime el alfabeto en la consola. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_alfabeto_abd11004e4d4a3f36f20a12b758af19f2}{Codificar\+\_\+letra\+\_\+en\+\_\+la\+\_\+matriz\+\_\+de\+\_\+permutacion}} (const char \&m, const char \&c)
+\begin{DoxyCompactList}\small\item\em Operación de Codificación de una letra de la matriz de permutación. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_alfabeto_a9fffaaf8a9f8fe81b3d5bf1067fb3048}{Decodificar\+\_\+letra\+\_\+en\+\_\+la\+\_\+matriz\+\_\+de\+\_\+permutacion}} (const char \&x, const char \&c)
+\begin{DoxyCompactList}\small\item\em Operación de decodificación de una letra de la matriz de permutación La entrada es un letra codificada mediante a la matriz de permutación x, con la letra clave c, una vez encontrada la letra x en la fila que empieza por c, se registra la posición y luego retorna la letra en la posición registrada en la primera fila. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_alfabeto_ae62ea0bc1b86ee3476f5fd1fd979a8f3}{Cantidad\+\_\+\+De\+\_\+\+Mensajes}} () const
+\begin{DoxyCompactList}\small\item\em Retorna la cantidad de mensajes en un alfabeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_alfabeto_afb2f90f6a2a16fd2b1d4ceb19e69a096}{Anadir\+\_\+\+Mensaje}} ()
+\begin{DoxyCompactList}\small\item\em Añade 1 a la cantidad de mensajes que tiene ese alfabeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_alfabeto_a5bb40504e266f8f498b72cc7b7ca6c1b}{Suprimir\+\_\+\+Mensaje}} ()
+\begin{DoxyCompactList}\small\item\em Resta 1 a la cantidad de mensajes que tiene ese alfabeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el conjunto de características y operaciones de un \mbox{\hyperlink{class_alfabeto}{Alfabeto}}. 
+
+Ofrece la operación de lectura y escritura de un alfabeto y las operaciones de codificar y descodificar characteres mediante substitución polialfabetica con los propios alfabetos. El alfabeto en si mismo se leera y guardará como un string. También para optimizar temporalmente las operaciones de codificación y descodificación creamos un booleano que idica si el alfabeto eseta ordenado en sentido alfa numerico para poder aplicar la busqueda binaria en las operaciónes de codificación y descodificación optimizando el coste temporal. 
+
+Definición en la línea 33 del archivo Alfabeto.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_alfabeto_a218c7371b04d202f3c7bfbc2640f091a}\label{class_alfabeto_a218c7371b04d202f3c7bfbc2640f091a}} 
+\index{Alfabeto@{Alfabeto}!Alfabeto@{Alfabeto}}
+\index{Alfabeto@{Alfabeto}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Alfabeto()}{Alfabeto()}}
+{\footnotesize\ttfamily Alfabeto\+::\+Alfabeto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un \mbox{\hyperlink{class_alfabeto}{Alfabeto}}. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un alfabeto vacio 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste\textbackslash{}n Constante}
+
+\end{DoxyParagraph}
+
+
+Definición en la línea 7 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                    \{}
+\DoxyCodeLine{8     Alfabeto\_Ordenado = \textcolor{keyword}{false};}
+\DoxyCodeLine{9     Es\_especial\_el\_alfabeto = \textcolor{keyword}{false};}
+\DoxyCodeLine{10     CantidadDeMensajes = 0;}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_alfabeto_ad59f5232dbf908a6a2c61ff90b02502b}\label{class_alfabeto_ad59f5232dbf908a6a2c61ff90b02502b}} 
+\index{Alfabeto@{Alfabeto}!Leer\_Alfabeto@{Leer\_Alfabeto}}
+\index{Leer\_Alfabeto@{Leer\_Alfabeto}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Leer\_Alfabeto()}{Leer\_Alfabeto()}}
+{\footnotesize\ttfamily void Alfabeto\+::\+Leer\+\_\+\+Alfabeto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de lectura. 
+
+Lee un alfabeto, despues comprueba si el alfabeto está ordenado o no
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+alfabeto = alfabeto leido; indica si el alfabeto leido esta ordenado o no 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste\textbackslash{}n Logaritmico respecto al tamaño del alfabeto}
+
+\end{DoxyParagraph}
+
+
+Definición en la línea 13 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                              \{}
+\DoxyCodeLine{14     cin.ignore();}
+\DoxyCodeLine{15     getline (cin,alfabeto);}
+\DoxyCodeLine{16     Alfabeto\_Ordenado = Mirar\_si\_el\_alfabeto\_esta\_ordenado();}
+\DoxyCodeLine{17     Es\_especial\_el\_alfabeto = Mirar\_si\_el\_alfabeto\_es\_especial();}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_alfabeto_ab781a0a5baa722711fbb880b280899da}\label{class_alfabeto_ab781a0a5baa722711fbb880b280899da}} 
+\index{Alfabeto@{Alfabeto}!Imprimir\_Alfabeto@{Imprimir\_Alfabeto}}
+\index{Imprimir\_Alfabeto@{Imprimir\_Alfabeto}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Imprimir\_Alfabeto()}{Imprimir\_Alfabeto()}}
+{\footnotesize\ttfamily void Alfabeto\+::\+Imprimir\+\_\+\+Alfabeto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operación que imprime el alfabeto en la consola. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el alfabeto 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste\textbackslash{}n constante }
+
+\end{DoxyParagraph}
+
+
+Definición en la línea 30 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                        \{}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if} (Es\_especial\_el\_alfabeto) \{}
+\DoxyCodeLine{32         cout << \textcolor{stringliteral}{"{}especial "{}};}
+\DoxyCodeLine{33         cout << \textcolor{charliteral}{'['} << alfabeto[0] << \textcolor{stringliteral}{"{}.."{}} << alfabeto[alfabeto.size()-\/1] << \textcolor{stringliteral}{"{}] "{}};}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{36         cout << \textcolor{stringliteral}{"{}normal "{}};}
+\DoxyCodeLine{37         cout << \textcolor{charliteral}{'"{}'} << alfabeto << \textcolor{charliteral}{'"{}'} << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     cout << CantidadDeMensajes << \textcolor{stringliteral}{"{} mensajes"{}} << endl;}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_alfabeto_abd11004e4d4a3f36f20a12b758af19f2}\label{class_alfabeto_abd11004e4d4a3f36f20a12b758af19f2}} 
+\index{Alfabeto@{Alfabeto}!Codificar\_letra\_en\_la\_matriz\_de\_permutacion@{Codificar\_letra\_en\_la\_matriz\_de\_permutacion}}
+\index{Codificar\_letra\_en\_la\_matriz\_de\_permutacion@{Codificar\_letra\_en\_la\_matriz\_de\_permutacion}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Codificar\_letra\_en\_la\_matriz\_de\_permutacion()}{Codificar\_letra\_en\_la\_matriz\_de\_permutacion()}}
+{\footnotesize\ttfamily char Alfabeto\+::\+Codificar\+\_\+letra\+\_\+en\+\_\+la\+\_\+matriz\+\_\+de\+\_\+permutacion (\begin{DoxyParamCaption}\item[{const char \&}]{m,  }\item[{const char \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Operación de Codificación de una letra de la matriz de permutación. 
+
+Codifica una letra m, con una clave c segun la matriz generada por el afabeto ~\newline
+Ej\+: Un alfabeto de todas las letras de la a a la z en minuscula, generaria esta matriz\+: ~\newline
+ a b c d e f g h i j k l m n o p q r s t u v w x y z ~\newline
+b c d e f g h i j k l m n o p q r s t u v w x y z a ~\newline
+c d e f g h i j k l m n o p q r s t u v w x y z a b ~\newline
+d e f g h i j k l m n o p q r s t u v w x y z a b c ~\newline
+e f g h i j k l m n o p q r s t u v w x y z a b c d ~\newline
+f g h i j k l m n o p q r s t u v w x y z a b c d e ~\newline
+g h i j k l m n o p q r s t u v w x y z a b c d e f ~\newline
+h i j k l m n o p q r s t u v w x y z a b c d e f g ~\newline
+i j k l m n o p q r s t u v w x y z a b c d e f g h ~\newline
+j k l m n o p q r s t u v w x y z a b c d e f g h i ~\newline
+k l m n o p q r s t u v w x y z a b c d e f g h i j ~\newline
+l m n o p q r s t u v w x y z a b c d e f g h i j k ~\newline
+m n o p q r s t u v w x y z a b c d e f g h i j k l ~\newline
+n o p q r s t u v w x y z a b c d e f g h i j k l m ~\newline
+o p q r s t u v w x y z a b c d e f g h i j k l m n ~\newline
+p q r s t u v w x y z a b c d e f g h i j k l m n o ~\newline
+q r s t u v w x y z a b c d e f g h i j k l m n o p ~\newline
+r s t u v w x y z a b c d e f g h i j k l m n o p q ~\newline
+s t u v w x y z a b c d e f g h i j k l m n o p q r ~\newline
+t u v w x y z a b c d e f g h i j k l m n o p q r s ~\newline
+u v w x y z a b c d e f g h i j k l m n o p q r s t ~\newline
+v w x y z a b c d e f g h i j k l m n o p q r s t u ~\newline
+w x y z a b c d e f g h i j k l m n o p q r s t u v ~\newline
+x y z a b c d e f g h i j k l m n o p q r s t u v w ~\newline
+y z a b c d e f g h i j k l m n o p q r s t u v w x ~\newline
+z a b c d e f g h i j k l m n o p q r s t u v w x y ~\newline
+ Si m = d c c = c el resultado sera f
+
+\begin{DoxyPrecond}{Precondición}
+m, c existen en el alfabeto, el alfabeto no es vacio 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la letra asignada a la matriz de coordenadas m,c 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste\textbackslash{}n Depende, si el alfabeto está ordenado la busqueda es logaritmica respecto al tamaño del alfabeto, si no lo esta el coste es lineal}
+
+\end{DoxyParagraph}
+
+
+Definición en la línea 20 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                                                                         \{}
+\DoxyCodeLine{21     \textcolor{keywordflow}{if} (Alfabeto\_Ordenado) \textcolor{keywordflow}{return} Codifica\_letra\_en\_la\_matriz\_de\_permutacion\_ordenado (m, c);}
+\DoxyCodeLine{22     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} Codificar\_letra\_en\_la\_matriz\_de\_permutacion\_no\_ordenado (m, c);}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_alfabeto_a9fffaaf8a9f8fe81b3d5bf1067fb3048}\label{class_alfabeto_a9fffaaf8a9f8fe81b3d5bf1067fb3048}} 
+\index{Alfabeto@{Alfabeto}!Decodificar\_letra\_en\_la\_matriz\_de\_permutacion@{Decodificar\_letra\_en\_la\_matriz\_de\_permutacion}}
+\index{Decodificar\_letra\_en\_la\_matriz\_de\_permutacion@{Decodificar\_letra\_en\_la\_matriz\_de\_permutacion}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Decodificar\_letra\_en\_la\_matriz\_de\_permutacion()}{Decodificar\_letra\_en\_la\_matriz\_de\_permutacion()}}
+{\footnotesize\ttfamily char Alfabeto\+::\+Decodificar\+\_\+letra\+\_\+en\+\_\+la\+\_\+matriz\+\_\+de\+\_\+permutacion (\begin{DoxyParamCaption}\item[{const char \&}]{x,  }\item[{const char \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Operación de decodificación de una letra de la matriz de permutación La entrada es un letra codificada mediante a la matriz de permutación x, con la letra clave c, una vez encontrada la letra x en la fila que empieza por c, se registra la posición y luego retorna la letra en la posición registrada en la primera fila. 
+
+\begin{DoxyPrecond}{Precondición}
+x, c existen en el alfabeto, el alfabeto no es vacio 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la letra decodificada de x con la clave c 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste\textbackslash{}n Depende, si el alfabeto está ordenado la busqueda es logaritmica respecto al tamaño del alfabeto, si no lo esta el coste es lineal}
+
+\end{DoxyParagraph}
+
+
+Definición en la línea 25 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                                                                           \{}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (Alfabeto\_Ordenado) \textcolor{keywordflow}{return} Decodificar\_letra\_en\_la\_matriz\_de\_permutacion\_ordenado(x, c);}
+\DoxyCodeLine{27     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} Decodificar\_letra\_en\_la\_matriz\_de\_permutacion\_no\_ordenado(x, c);}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_alfabeto_ae62ea0bc1b86ee3476f5fd1fd979a8f3}\label{class_alfabeto_ae62ea0bc1b86ee3476f5fd1fd979a8f3}} 
+\index{Alfabeto@{Alfabeto}!Cantidad\_De\_Mensajes@{Cantidad\_De\_Mensajes}}
+\index{Cantidad\_De\_Mensajes@{Cantidad\_De\_Mensajes}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Cantidad\_De\_Mensajes()}{Cantidad\_De\_Mensajes()}}
+{\footnotesize\ttfamily int Alfabeto\+::\+Cantidad\+\_\+\+De\+\_\+\+Mensajes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna la cantidad de mensajes en un alfabeto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la cantidad de mensajes en un alfabeto 
+\end{DoxyPostcond}
+
+
+Definición en la línea 42 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                                         \{}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} CantidadDeMensajes;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_alfabeto_afb2f90f6a2a16fd2b1d4ceb19e69a096}\label{class_alfabeto_afb2f90f6a2a16fd2b1d4ceb19e69a096}} 
+\index{Alfabeto@{Alfabeto}!Anadir\_Mensaje@{Anadir\_Mensaje}}
+\index{Anadir\_Mensaje@{Anadir\_Mensaje}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Anadir\_Mensaje()}{Anadir\_Mensaje()}}
+{\footnotesize\ttfamily void Alfabeto\+::\+Anadir\+\_\+\+Mensaje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade 1 a la cantidad de mensajes que tiene ese alfabeto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Añade 1 a la cantidad de mensajes que tiene ese alfabeto 
+\end{DoxyPostcond}
+
+
+Definición en la línea 46 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                               \{}
+\DoxyCodeLine{47     ++CantidadDeMensajes;}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_alfabeto_a5bb40504e266f8f498b72cc7b7ca6c1b}\label{class_alfabeto_a5bb40504e266f8f498b72cc7b7ca6c1b}} 
+\index{Alfabeto@{Alfabeto}!Suprimir\_Mensaje@{Suprimir\_Mensaje}}
+\index{Suprimir\_Mensaje@{Suprimir\_Mensaje}!Alfabeto@{Alfabeto}}
+\doxysubsubsection{\texorpdfstring{Suprimir\_Mensaje()}{Suprimir\_Mensaje()}}
+{\footnotesize\ttfamily void Alfabeto\+::\+Suprimir\+\_\+\+Mensaje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resta 1 a la cantidad de mensajes que tiene ese alfabeto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Resta 1 a la cantidad de mensajes que tiene ese alfabeto 
+\end{DoxyPostcond}
+
+
+Definición en la línea 50 del archivo Alfabeto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                 \{}
+\DoxyCodeLine{51     -\/-\/CantidadDeMensajes;}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_alfabeto_8hh}{Alfabeto.\+hh}}\item 
+\mbox{\hyperlink{_alfabeto_8cc}{Alfabeto.\+cc}}\end{DoxyCompactItemize}

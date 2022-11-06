@@ -1,0 +1,157 @@
+/**
+  @mainpage Programa de encriptación y desencriptación.
+  <div align = "right">Joan Esgleas</div>
+  <h3>Clases:</h3>
+  Las <a href="annotated.html"><b>clases</b></a> que he definido para esta práctica son las siguients: \n
+  <em>Alfabeto</em> \n
+  <em>Mensaje</em> \n
+  <em>Conjunto_Alfabetos</em> \n
+  <em>Conjunto_Mensajes</em> \n
+  
+    <h3>Especificación:</h3>
+    Las <a href="annotated.html"><b>clases</b></a> las he especificado en archivos header en el directorio <a href="dir_cdc6aaa126b433e03553128b59621360.html"><b>Cabeceras</b></a>, 
+    tambien he usado la implementación de los arboles binarios de la FIB en la asignatura de PRO2 pero por claridad no la incluire en el Doxygen. \n
+    Los archivos header son los siguientes: \n
+    <em>Alfabeto.hh</em> \n
+    <em>Mensaje.hh</em> \n
+    <em>Conjunto_Alfabetos.hh</em> \n
+    <em>Conjunto_Mensajes.hh</em>
+
+    <h3>Implementación:</h3>
+    Las <a href="annotated.html"><b>clases</b></a> las he implementado en archivos .cc en el directorio <a href="dir_0cddc42f4afeb44e8bdc5ef5fc5bada7.html"><b>Implementaciones</b></a> 
+    también he implementado el programa principal en un archivo .cc (<em>main.cc</em>). \n
+    Los archivos .cc son los siguientes: \n
+    <em>Alfabeto.cc</em> \n
+    <em>Mensaje.cc</em> \n
+    <em>Conjunto_Alfabetos.cc</em> \n
+    <em>Conjunto_Mensajes.cc</em> \n
+    <em>main.cc</em> \n
+    \n
+<div class="header">
+  <div class="headertitle">
+<div class="title">Enunciado de la práctica:</div>  </div>
+</div>
+<h2><b>Introduccion:</b></h2>
+La Criptografía es la ciencia que trata sobre encriptar y desencriptar información.
+Desde la edad antigua se han encriptado mensajes diplomáticos, militares o administra
+tivos para conseguir comunicaciones seguras, a salvo de espías.
+En la actualidad, la Criptografía desempeña un papel de gran importancia dentro de
+la Informática. Su uso es prácticamente cotidiano, ya que elementos tan familiares como
+los passwords, los números de tarjetas, etc., se guardan encriptados e incluso hay pro
+gramas que permiten cifrar y descifrar los mensajes de correo electrónico y, en general,
+cualquier documento en soporte digital.
+Un mensaje puede encriptarse por permutación o por sustitución de sus caracteres, si
+guiendo unas reglas predefinidas y quizá introduciendo algún elemento adicional (cla
+ves, números aleatorios, ...). Obviamente, si se desea descifrar un mensaje ya encriptado,
+resulta esencial que las reglas de cifrado sean reversibles.
+En esta práctica proponemos dos métodos de encriptación, uno de cada tipo. Para ca
+da caso solo mostramos el algoritmo de encriptación, el de desencriptación es fácilmente
+deducible.
+    \n
+    <h2><b>Funcionalidades:</b></h2>
+    <h3><b>Decisiones sobre los datos:</b></h3>
+Con el objetivo de simplificar los procesos de encriptación y desencriptación, los
+mensajes, alfabetos y claves que usaremos para probar la práctica estarán formados úni
+camente por caracteres de la tabla ASCII con índices entre 32 (espacio en blanco) y 126
+(∼). En particular, consideraremos lo siguiente:
+cada mensaje, clave y alfabeto estará formado por una sola línea de texto, no vacía
+un alfabeto será una permutación de un subconjunto de caracteres válidos (abc es
+distinto que bca)
+se puede distinguir un tipo especial de alfabeto, consistente en un intervalo de ca
+racteres válidos, en la permutación correcta (abc es especial, mientras que bca no lo
+es); puede comprobarse que en este caso el método de la sustitución polialfabética
+admite soluciones aún más simples y eficientes
+Los datos del programa se dividen en dos partes. Un primer grupo de alfabetos y
+mensajes se usará para la inicialización del sistema. Una vez realizada dicha inicializa
+ción, el programa ofrecerá un repertorio de funcionalidades. Cada funcionalidad podrá
+requerir a su vez unos datos y producirá una salida que describimos con más precisión
+en el siguiente apartado.
+En todo momento, se leerán solo datos sintácticamente correctos y no será necesario
+comprobar dicha corrección. Por ejemplo, si decimos que inicialmente el sistema contie
+ne M mensajes, el programa recibirá un entero M mayor o igual que 0 y a continuación
+exactamente M mensajes, con las restricciones mencionadas a lo largo de este enuncia
+do. Los alfabetos serán asimismo sintácticamente correctos, por ejemplo sus caracteres
+siempre estarán entre los ASCII ya comentados. Los mensajes y las claves siempre esta
+rán escritos usando el alfabeto que les acompaña en cada funcionalidad.
+
+<h3><b>Programa principal: estructura y comandos:</b></h3> 
+
+El programa principal empezará leyendo un número inicial de alfabetos A ≥ 0 y
+una secuencia de A alfabetos. Cada alfabeto irá precedido por un string que será su
+identificador. Se garantiza que los identificadores de los alfabetos no están repetidos.
+A continuación se leerá un número inicial de mensajes M ≥ 0 y una secuencia de
+M mensajes. Cada mensaje vendrá precedido por un string, que servirá como identifi
+cador del mismo y del identificador del alfabeto al que pertenece. Se garantiza que los
+identificadores de los mensajes no están repetidos y que los alfabetos están entre los
+anteriormente leídos.
+Notemos que las magnitudes M y A no serán constantes ya que posteriormente se
+podrán añadir o borrar nuevos mensajes o nuevos alfabetos.
+Terminadas las inicializaciones, se procesará una serie de comandos acabados en un
+comando fin. La estructura general del programa principal será la siguiente:
+
+ \n
+ \n
+<i>lectura del conjunto inicial de mensajes;</i> \n
+<i>lectura del conjunto inicial de alfabetos;</i> \n
+<i>lee comando;</i> \n
+<i>while (comando != "fin") { </i>\n
+<i>procesa comando;</i> \n
+<i>lee comando;</i> \n
+<i>}</i> \n
+\n
+
+Los comandos aceptados se describen a continuación. Todo ellos se presentan en
+dos versiones, una con el nombre completo y otra con el nombre abreviado. La sintaxis
+exacta de la entrada y la salida de cada comando se podrá derivar del juego de pruebas
+público del ejercicio creado en el Jutge para cada entrega.
+1. <i>nuevo_mensaje idm ida</i>: lee y añade un nuevo mensaje con identificador idm
+escrito mediante el alfabeto de identificador ida. El comando admite la forma abre
+viada nm. Si no existe un alfabeto con identificador ida se imprime un mensaje de
+error. Si ya existía un mensaje en el sistema con el mismo identificador se imprime
+un mensaje de error. En caso contrario se imprime el número de mensajes M en el
+sistema después de añadirlo.
+2. <i>nuevo_alfabeto ida</i>: lee y añade un nuevo alfabeto con identificador ida. El
+comando admite la forma abreviada na. Si ya existía un alfabeto en el sistema
+con el mismo identificador se imprime un mensaje de error. En caso contrario se
+imprime el número de alfabetos A en el sistema después de añadirlo.
+3. <i>borra_mensaje idm</i>: elimina del sistema un mensaje con identificador idm. El
+comando admite la forma abreviada bm. Si no existe un mensaje con identificador
+idm se imprime un mensaje de error. En caso contrario se imprime el número de
+mensajes M después de borrarlo. Si más tarde se añade otro mensaje con el mismo
+nombre es como si el anterior no hubiera existido.
+4. <i>borra_alfabeto ida</i>: elimina del sistema un alfabeto con identificador ida. El
+comando admite la forma abreviada ba. Si no existe un alfabeto con identificador
+ida se imprime un mensaje de error. Si existen mensajes con dicho alfabeto im
+prime un mensaje de error. En caso contrario se imprime el número de alfabetos A
+después de borrarlo. Si más tarde se añade otro alfabeto con el mismo identificador
+es como si el anterior no hubiera existido.
+5. <i>listar_mensajes</i>: se listan los mensajes del sistema en orden alfabético de iden
+tificador. El comando admite la forma abreviada lm.
+6. <i>listar_alfabetos</i>: se listan los alfabetos del sistema en orden creciente de
+identificador. El comando admite la forma abreviada la.
+7. <i>codificar_sustitucion_guardado idm cl</i>: codifica el mensaje de identifi
+cador idm mediante la clave cl. El comando admite la forma abreviada csg. Si el
+mensaje idm no existe se imprime un mensaje de error. En caso contrario se impri
+me el mensaje codificado.
+8. <i>codificar_sustitucion ida cl</i>: lee un mensaje escrito con el alfabeto de iden
+tificador ida, lo codifica mediante la clave cl. El comando admite la forma abrevia
+da cs. Si el alfabeto ida no existe se imprime un mensaje de error. En caso contrario
+se imprime el mensaje codificado.
+9. <i>decodificar_sustitución ida cl</i>: lee un mensaje escrito con el alfabeto de
+identificador ida y lo decodifica mediante la clave cl. El comando admite la forma
+abreviada ds. Si el alfabeto ida no existe se imprime un mensaje de error. En caso
+contrario se imprime el mensaje decodificado.
+10. <i>codificar_permutacion_guardado idm b</i>: codifica el mensaje con identifi
+cador idm, dividiendo el mensaje en bloques de tamaño b. El comando admite la
+forma abreviada cpg. Si el mensaje idm no existe se imprime un mensaje de error.
+En caso contrario se imprime el mensaje codificado.
+11. <i>codificar_permutacion b</i>: lee y codifica un mensaje, dividiéndolo en bloques
+de tamaño b. El comando admite la forma abreviada cp. Se imprime el mensaje
+codificado.
+12. <i>decodificar_permutacion b</i>: lee y decodifica un mensaje, dividiéndolo en
+bloques de tamaño b. El comando admite la forma abreviada dp. Se imprime el
+mensaje decodificado.
+13. <i>fin</i>: termina la ejecución del programa
+
+©PRO2, CS-UPC \n
+*/

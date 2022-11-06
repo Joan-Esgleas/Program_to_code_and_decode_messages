@@ -1,0 +1,320 @@
+\hypertarget{class_conjunto___alfabetos}{}\doxysection{Referencia de la Clase Conjunto\+\_\+\+Alfabetos}
+\label{class_conjunto___alfabetos}\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+
+
+Representa el conjunto de características y operaciones que se podrá realizar sobre un conjunto de Alfabetos.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_conjunto___alfabetos_a2d2e07a24dbddee70e45920f176cd0e8}{Conjunto\+\_\+\+Alfabetos}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunto___alfabetos_ad6216ad1b5b0f36cb523f1b6893f1480}{Leer\+\_\+conjunto\+\_\+de\+\_\+alfabetos}} ()
+\begin{DoxyCompactList}\small\item\em Operacion de lectura de un conjunto de alfabetos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunto___alfabetos_a0ee97874af4ca0d45770afd42ab29055}{Anadir\+\_\+alfabeto}} (string identificador\+\_\+del\+\_\+alfabeto)
+\begin{DoxyCompactList}\small\item\em Operacion que lee y añade un alfabeto al mapa de conjuntos de alfabetos Se lee y añade un nuevo alfabeto con un identificador. Luego se imprime el número de alfabetos en el sistema después de añadirlo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunto___alfabetos_afa1811cc6691cb26d91d8b669d4574b9}{Borrar\+\_\+alfabeto}} (string identificador\+\_\+del\+\_\+alfabeto)
+\begin{DoxyCompactList}\small\item\em Operacion que borra un alfabeto del conjunto. Se lee y elimina del sistema un alfabeto con un identificador. Luego se imprime el número de alfabetos A después de borrarlo. Si más tarde se añade otro alfabeto con el mismo identificador es como si el anterior no hubiera existido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunto___alfabetos_a6a0a3247359426a361adbca2eb2941bc}{Listar\+\_\+alfabetos}} () const
+\begin{DoxyCompactList}\small\item\em Operacion que lista los alfabetos Se listan los alfabetos del sistema en orden creciente de identificador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_alfabeto}{Alfabeto}} \mbox{\hyperlink{class_conjunto___alfabetos_a7cf35f198456bc9ad82d00b0a8736b10}{Consultar\+\_\+alfabeto}} (string Identificador) const
+\begin{DoxyCompactList}\small\item\em Operacion que retorna un alfabeto identificado con un identificador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}{Existe\+\_\+alfabeto}} (string identificador\+\_\+de\+\_\+alfabeto)
+\begin{DoxyCompactList}\small\item\em Booleano que retorna true si existe al menos 1 alfabeto con este identificador y falso en cualqueir otro caso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunto___alfabetos_acbbc6f8c397016147e1792992e41219d}{Anadir\+\_\+mensaje\+\_\+al\+\_\+conjunto}} (string ida)
+\begin{DoxyCompactList}\small\item\em Operacion que suma 1 a la cantidad de mensajes con ese alfabeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunto___alfabetos_a5b5cc73cafc957f6e17ca70ef5307fb0}{Borrar\+\_\+mensaje\+\_\+al\+\_\+conjunto}} (string ida)
+\begin{DoxyCompactList}\small\item\em Operacion que resta 1 a la cantidad de mensajes con ese alfabeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el conjunto de características y operaciones que se podrá realizar sobre un conjunto de Alfabetos. 
+
+Ofrece la operación de lectura y de listar en la consola los alfabetos miembros en el conjunto. También ofrece las operaciones de añadir alfabetos y borrar alfabetos del conjunto. Dado a que es posible que otra classe quiera acceder a algun alfabeto concreto del conjunto, he creado una operación de consulta que retorna un alfabeto del conjunto identificado con un identificador proporcionado.
+
+Como también voy a necesitar saber si existe o no cierto alfabeto en el conjunt he creado una operacion de consulta que retorna un booleano como true si el alfabeto existe y como falso si no existe
+
+Como voy a tener que acceder a los alfabetos del conjunto voy a implementar el conjunto como un map de strings como identificadores y alfabetos. 
+
+Definición en la línea 34 del archivo Conjunto\+\_\+\+Alfabetos.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_conjunto___alfabetos_a2d2e07a24dbddee70e45920f176cd0e8}\label{class_conjunto___alfabetos_a2d2e07a24dbddee70e45920f176cd0e8}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Conjunto\_Alfabetos()}{Conjunto\_Alfabetos()}}
+{\footnotesize\ttfamily Conjunto\+\_\+\+Alfabetos\+::\+Conjunto\+\_\+\+Alfabetos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de alfabetos. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de alfabetos vacio. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste\textbackslash{}n Constante}
+
+\end{DoxyParagraph}
+
+
+Definición en la línea 7 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                                        \{}
+\DoxyCodeLine{8 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_conjunto___alfabetos_ad6216ad1b5b0f36cb523f1b6893f1480}\label{class_conjunto___alfabetos_ad6216ad1b5b0f36cb523f1b6893f1480}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Leer\_conjunto\_de\_alfabetos@{Leer\_conjunto\_de\_alfabetos}}
+\index{Leer\_conjunto\_de\_alfabetos@{Leer\_conjunto\_de\_alfabetos}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Leer\_conjunto\_de\_alfabetos()}{Leer\_conjunto\_de\_alfabetos()}}
+{\footnotesize\ttfamily void Conjunto\+\_\+\+Alfabetos\+::\+Leer\+\_\+conjunto\+\_\+de\+\_\+alfabetos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operacion de lectura de un conjunto de alfabetos. 
+
+Se lee un número inicial de alfabetos A ≥ 0 y una secuencia de A identificadores y alfabetos. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El conjunto adquiere los alfabetos leeidos. 
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Coste\textbackslash{}n Es lineal respecto al coste de la cantidad de alfabetos a leer}
+
+\end{DoxyParagraph}
+
+
+Definición en la línea 10 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                                     \{}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} numConj;}
+\DoxyCodeLine{12     cin >> numConj;}
+\DoxyCodeLine{13     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numConj; i++) \{}
+\DoxyCodeLine{14         \textcolor{keywordtype}{string} ida;}
+\DoxyCodeLine{15         cin >> ida;}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_alfabeto}{Alfabeto}} al;}
+\DoxyCodeLine{17         al.\mbox{\hyperlink{class_alfabeto_ad59f5232dbf908a6a2c61ff90b02502b}{Leer\_Alfabeto}}();}
+\DoxyCodeLine{18         ConjuntoDeAlfabetos[ida] = al;}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_conjunto___alfabetos_a0ee97874af4ca0d45770afd42ab29055}\label{class_conjunto___alfabetos_a0ee97874af4ca0d45770afd42ab29055}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Anadir\_alfabeto@{Anadir\_alfabeto}}
+\index{Anadir\_alfabeto@{Anadir\_alfabeto}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Anadir\_alfabeto()}{Anadir\_alfabeto()}}
+{\footnotesize\ttfamily void Conjunto\+\_\+\+Alfabetos\+::\+Anadir\+\_\+alfabeto (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+del\+\_\+alfabeto }\end{DoxyParamCaption})}
+
+
+
+Operacion que lee y añade un alfabeto al mapa de conjuntos de alfabetos Se lee y añade un nuevo alfabeto con un identificador. Luego se imprime el número de alfabetos en el sistema después de añadirlo. 
+
+\begin{DoxyPrecond}{Precondición}
+No existe un alfabeto con el mismo identificador 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Añade el alfabeto leeido al conjunto. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 22 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                                                           \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_alfabeto}{Alfabeto}} a;}
+\DoxyCodeLine{24     a.\mbox{\hyperlink{class_alfabeto_ad59f5232dbf908a6a2c61ff90b02502b}{Leer\_Alfabeto}}();}
+\DoxyCodeLine{25     ConjuntoDeAlfabetos[identificador\_del\_alfabeto] = a;}
+\DoxyCodeLine{26     cout << ConjuntoDeAlfabetos.size() << endl;}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_conjunto___alfabetos_afa1811cc6691cb26d91d8b669d4574b9}\label{class_conjunto___alfabetos_afa1811cc6691cb26d91d8b669d4574b9}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Borrar\_alfabeto@{Borrar\_alfabeto}}
+\index{Borrar\_alfabeto@{Borrar\_alfabeto}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Borrar\_alfabeto()}{Borrar\_alfabeto()}}
+{\footnotesize\ttfamily void Conjunto\+\_\+\+Alfabetos\+::\+Borrar\+\_\+alfabeto (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+del\+\_\+alfabeto }\end{DoxyParamCaption})}
+
+
+
+Operacion que borra un alfabeto del conjunto. Se lee y elimina del sistema un alfabeto con un identificador. Luego se imprime el número de alfabetos A después de borrarlo. Si más tarde se añade otro alfabeto con el mismo identificador es como si el anterior no hubiera existido. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un alfabeto con ese identificador y no hay ningun mensaje con ese alfabeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Borra un alfabeto del conjunto 
+\end{DoxyPostcond}
+
+
+Definición en la línea 29 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                                                            \{}
+\DoxyCodeLine{30     ConjuntoDeAlfabetos.erase(identificador\_del\_alfabeto);}
+\DoxyCodeLine{31     cout << ConjuntoDeAlfabetos.size() << endl;}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_conjunto___alfabetos_a6a0a3247359426a361adbca2eb2941bc}\label{class_conjunto___alfabetos_a6a0a3247359426a361adbca2eb2941bc}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Listar\_alfabetos@{Listar\_alfabetos}}
+\index{Listar\_alfabetos@{Listar\_alfabetos}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Listar\_alfabetos()}{Listar\_alfabetos()}}
+{\footnotesize\ttfamily void Conjunto\+\_\+\+Alfabetos\+::\+Listar\+\_\+alfabetos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion que lista los alfabetos Se listan los alfabetos del sistema en orden creciente de identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el conjunto de alfabetos. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 34 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                 \{}
+\DoxyCodeLine{35     map<string, Alfabeto>::const\_iterator it = ConjuntoDeAlfabetos.begin();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} n = 1;}
+\DoxyCodeLine{37     \textcolor{keywordflow}{while} ( it != ConjuntoDeAlfabetos.end()) \{}
+\DoxyCodeLine{38         cout << n <<\textcolor{stringliteral}{"{}. "{}} << it -\/> first << endl;}
+\DoxyCodeLine{39         it -\/> second.Imprimir\_Alfabeto();}
+\DoxyCodeLine{40         ++n;}
+\DoxyCodeLine{41         ++it;}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_conjunto___alfabetos_a7cf35f198456bc9ad82d00b0a8736b10}\label{class_conjunto___alfabetos_a7cf35f198456bc9ad82d00b0a8736b10}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Consultar\_alfabeto@{Consultar\_alfabeto}}
+\index{Consultar\_alfabeto@{Consultar\_alfabeto}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Consultar\_alfabeto()}{Consultar\_alfabeto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_alfabeto}{Alfabeto}} Conjunto\+\_\+\+Alfabetos\+::\+Consultar\+\_\+alfabeto (\begin{DoxyParamCaption}\item[{string}]{Identificador }\end{DoxyParamCaption}) const}
+
+
+
+Operacion que retorna un alfabeto identificado con un identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+Ha de existir un alfabeto con ese identificador 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el alfabeto asociado a un identificador si el alfabeto no existe retorna un alfabeto con el identificador nulo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 53 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                                                          \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} ConjuntoDeAlfabetos.at(Identificador);}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}\label{class_conjunto___alfabetos_a560275a78c9abe405ca546a4eb0ba0cd}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Existe\_alfabeto@{Existe\_alfabeto}}
+\index{Existe\_alfabeto@{Existe\_alfabeto}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Existe\_alfabeto()}{Existe\_alfabeto()}}
+{\footnotesize\ttfamily bool Conjunto\+\_\+\+Alfabetos\+::\+Existe\+\_\+alfabeto (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+de\+\_\+alfabeto }\end{DoxyParamCaption})}
+
+
+
+Booleano que retorna true si existe al menos 1 alfabeto con este identificador y falso en cualqueir otro caso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna true si existe almenos 1 alfabeto con ese identificador y falso en cualquier otro caso. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 57 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                                                          \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} ConjuntoDeAlfabetos.find(identificador\_de\_alfabeto) != ConjuntoDeAlfabetos.end();}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_conjunto___alfabetos_acbbc6f8c397016147e1792992e41219d}\label{class_conjunto___alfabetos_acbbc6f8c397016147e1792992e41219d}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Anadir\_mensaje\_al\_conjunto@{Anadir\_mensaje\_al\_conjunto}}
+\index{Anadir\_mensaje\_al\_conjunto@{Anadir\_mensaje\_al\_conjunto}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Anadir\_mensaje\_al\_conjunto()}{Anadir\_mensaje\_al\_conjunto()}}
+{\footnotesize\ttfamily void Conjunto\+\_\+\+Alfabetos\+::\+Anadir\+\_\+mensaje\+\_\+al\+\_\+conjunto (\begin{DoxyParamCaption}\item[{string}]{ida }\end{DoxyParamCaption})}
+
+
+
+Operacion que suma 1 a la cantidad de mensajes con ese alfabeto. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un alfabeto con el identificador ida 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Suma 1 a la cantidad de mensajes con ese alfabeto. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 45 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                               \{}
+\DoxyCodeLine{46     ConjuntoDeAlfabetos[ida].Anadir\_Mensaje();}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_conjunto___alfabetos_a5b5cc73cafc957f6e17ca70ef5307fb0}\label{class_conjunto___alfabetos_a5b5cc73cafc957f6e17ca70ef5307fb0}} 
+\index{Conjunto\_Alfabetos@{Conjunto\_Alfabetos}!Borrar\_mensaje\_al\_conjunto@{Borrar\_mensaje\_al\_conjunto}}
+\index{Borrar\_mensaje\_al\_conjunto@{Borrar\_mensaje\_al\_conjunto}!Conjunto\_Alfabetos@{Conjunto\_Alfabetos}}
+\doxysubsubsection{\texorpdfstring{Borrar\_mensaje\_al\_conjunto()}{Borrar\_mensaje\_al\_conjunto()}}
+{\footnotesize\ttfamily void Conjunto\+\_\+\+Alfabetos\+::\+Borrar\+\_\+mensaje\+\_\+al\+\_\+conjunto (\begin{DoxyParamCaption}\item[{string}]{ida }\end{DoxyParamCaption})}
+
+
+
+Operacion que resta 1 a la cantidad de mensajes con ese alfabeto. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un alfabeto con el identificador ida 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Resta 1 a la cantidad de mensajes con ese alfabeto. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 49 del archivo Conjunto\+\_\+\+Alfabetos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                                               \{}
+\DoxyCodeLine{50     ConjuntoDeAlfabetos[ida].Suprimir\_Mensaje();}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_conjunto___alfabetos_8hh}{Conjunto\+\_\+\+Alfabetos.\+hh}}\item 
+\mbox{\hyperlink{_conjunto___alfabetos_8cc}{Conjunto\+\_\+\+Alfabetos.\+cc}}\end{DoxyCompactItemize}
